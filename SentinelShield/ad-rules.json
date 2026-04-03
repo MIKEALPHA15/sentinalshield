@@ -1,0 +1,72 @@
+[
+  {
+    "id": 101,
+    "priority": 1,
+    "action": { "type": "block" },
+    "comment": "Ad network - DoubleClick",
+    "condition": { "urlFilter": "||doubleclick.net^", "resourceTypes": ["main_frame","sub_frame","script","xmlhttprequest","image","media","font","stylesheet"] }
+  },
+  {
+    "id": 102,
+    "priority": 1,
+    "action": { "type": "block" },
+    "comment": "Ad network - Google Ad Services",
+    "condition": { "urlFilter": "||pagead2.googlesyndication.com^", "resourceTypes": ["main_frame","sub_frame","script","xmlhttprequest","image","media","font","stylesheet"] }
+  },
+  {
+    "id": 103,
+    "priority": 1,
+    "action": { "type": "block" },
+    "comment": "Ad network - Google AdSense",
+    "condition": { "urlFilter": "||googlesyndication.com^", "resourceTypes": ["main_frame","sub_frame","script","xmlhttprequest","image","media","font","stylesheet"] }
+  },
+  {
+    "id": 104,
+    "priority": 1,
+    "action": { "type": "block" },
+    "comment": "Ad tracking - AdRoll",
+    "condition": { "urlFilter": "||adroll.com^", "resourceTypes": ["main_frame","sub_frame","script","xmlhttprequest","image","media","font","stylesheet"] }
+  },
+  {
+    "id": 105,
+    "priority": 1,
+    "action": { "type": "block" },
+    "comment": "Ad and tracking - adservice.google.com",
+    "condition": { "urlFilter": "||adservice.google.com^", "resourceTypes": ["main_frame","sub_frame","script","xmlhttprequest","image","media","font","stylesheet"] }
+  },
+  {
+    "id": 106,
+    "priority": 1,
+    "action": { "type": "block" },
+    "comment": "Ad and tracking - yandex",
+    "condition": { "urlFilter": "||yandex.ru^", "resourceTypes": ["main_frame","sub_frame","script","xmlhttprequest","image","media","font","stylesheet"] }
+  },
+  {
+    "id": 107,
+    "priority": 1,
+    "action": { "type": "block" },
+    "comment": "Ad and tracking - adsystem",
+    "condition": { "urlFilter": "||adsystem.com^", "resourceTypes": ["main_frame","sub_frame","script","xmlhttprequest","image","media","font","stylesheet"] }
+  },
+  {
+    "id": 108,
+    "priority": 1,
+    "action": { "type": "block" },
+    "comment": "Ad and tracking - adsafeprotected.com",
+    "condition": { "urlFilter": "||adsafeprotected.com^", "resourceTypes": ["main_frame","sub_frame","script","xmlhttprequest","image","media","font","stylesheet"] }
+  },
+  {
+    "id": 109,
+    "priority": 1,
+    "action": { "type": "block" },
+    "comment": "Ad and tracking - ads.yahoo.com",
+    "condition": { "urlFilter": "||ads.yahoo.com^", "resourceTypes": ["main_frame","sub_frame","script","xmlhttprequest","image","media","font","stylesheet"] }
+  },
+  {
+    "id": 110,
+    "priority": 1,
+    "action": { "type": "block" },
+    "comment": "Ad delivery - criteo",
+    "condition": { "urlFilter": "||criteo.com^", "resourceTypes": ["main_frame","sub_frame","script","xmlhttprequest","image","media","font","stylesheet"] }
+  }
+]

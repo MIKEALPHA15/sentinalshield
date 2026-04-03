@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SentinelShield — Threat Blocked</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Rajdhani:wght@700&display=swap');
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: #050d13;
+      color: #c8e8f8;
+      font-family: 'Rajdhani', sans-serif;
+      min-height: 100vh;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .container { text-align: center; max-width: 600px; padding: 40px 24px; }
+    .icon { font-size: 64px; margin-bottom: 16px; }
+    h1 { font-size: 32px; font-weight: 700; letter-spacing: 3px; color: #ff1744; text-transform: uppercase; margin-bottom: 8px; }
+    .sub { font-family: 'Share Tech Mono', monospace; color: #5a8aaa; font-size: 12px; letter-spacing: 2px; margin-bottom: 24px; }
+    .score-box {
+      display: inline-block; background: rgba(255,23,68,.1); border: 1px solid rgba(255,23,68,.4);
+      padding: 12px 32px; border-radius: 6px; margin-bottom: 24px;
+    }
+    .score-val { font-family: 'Share Tech Mono', monospace; font-size: 48px; color: #ff1744; }
+    .score-lbl { font-size: 10px; letter-spacing: 3px; color: #ff6d00; text-transform: uppercase; }
+    .url-box {
+      background: #0a1825; border: 1px solid #1a3a52; border-radius: 4px;
+      padding: 10px 16px; font-family: 'Share Tech Mono', monospace; font-size: 11px;
+      color: #5a8aaa; word-break: break-all; margin-bottom: 28px;
+    }
+    .btn {
+      display: inline-block; padding: 10px 28px; border-radius: 4px; cursor: pointer;
+      font-family: 'Rajdhani', sans-serif; font-size: 13px; font-weight: 700;
+      letter-spacing: 2px; text-transform: uppercase; text-decoration: none;
+      border: none; margin: 0 6px;
+    }
+    .btn-back { background: rgba(0,200,255,.1); border: 1px solid #00c8ff; color: #00c8ff; }
+    .btn-proceed { background: transparent; border: 1px solid #3a5a72; color: #5a8aaa; font-size: 11px; }
+    .btn:hover { opacity: 0.8; }
+    .warning-txt { font-size: 11px; color: #3a5a72; margin-top: 20px; font-family: 'Share Tech Mono', monospace; }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="icon">🛡️</div>
+  <h1>Threat Blocked</h1>
+  <p class="sub">SENTINELSHIELD — CRITICAL THREAT DETECTED</p>
+
+  <div class="score-box">
+    <div class="score-val" id="scoreVal">—</div>
+    <div class="score-lbl">Threat Score / 100</div>
+  </div>
+
+  <div class="url-box" id="blockedUrl">Loading...</div>
+
+  <div>
+    <button class="btn btn-back" onclick="history.back()">← Go Back</button>
+    <button class="btn btn-proceed" onclick="proceedAnyway()">Proceed Anyway (Risk)</button>
+  </div>
+
+  <p class="warning-txt">This page was automatically blocked by SentinelShield due to a critical threat score.<br>Proceeding may expose you to malware, phishing, or credential theft.</p>
+</div>
+<script>
+  const params = new URLSearchParams(location.search);
+  const score = params.get('score') || '?';
+  const url   = params.get('url')   || 'Unknown URL';
+  document.getElementById('scoreVal').textContent = score;
+  document.getElementById('blockedUrl').textContent = url;
+
+  function proceedAnyway() {
+    if (confirm('WARNING: This page was flagged as a critical threat. Proceed at your own risk?')) {
+      location.href = url;
+    }
+  }
+</script>
+</body>
+</html>

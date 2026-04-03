@@ -1,0 +1,202 @@
+[
+  {
+    "id": 1,
+    "priority": 1,
+    "action": { "type": "block" },
+    "comment": "C2 — fake Microsoft CDN impersonation",
+    "condition": {
+      "urlFilter": "||microsoftupdatecdn.net^",
+      "resourceTypes": ["main_frame","sub_frame","script","xmlhttprequest","websocket","image","media"]
+    }
+  },
+  {
+    "id": 2,
+    "priority": 1,
+    "action": { "type": "block" },
+    "comment": "C2 — fake CDN update service (Cobalt Strike C2)",
+    "condition": {
+      "urlFilter": "||updateservices-cdn.com^",
+      "resourceTypes": ["main_frame","sub_frame","script","xmlhttprequest","websocket","image","media"]
+    }
+  },
+  {
+    "id": 3,
+    "priority": 1,
+    "action": { "type": "block" },
+    "comment": "C2 — telemetry beacon disguise",
+    "condition": {
+      "urlFilter": "||telemetry-data.io^",
+      "resourceTypes": ["main_frame","sub_frame","script","xmlhttprequest","websocket"]
+    }
+  },
+  {
+    "id": 4,
+    "priority": 1,
+    "action": { "type": "block" },
+    "comment": "Phishing — PayPal impersonation",
+    "condition": {
+      "urlFilter": "||paypal-security-alert.com^",
+      "resourceTypes": ["main_frame","sub_frame","script","xmlhttprequest"]
+    }
+  },
+  {
+    "id": 5,
+    "priority": 1,
+    "action": { "type": "block" },
+    "comment": "Phishing — Google credential harvester",
+    "condition": {
+      "urlFilter": "||signin-google-verify.net^",
+      "resourceTypes": ["main_frame","sub_frame","script","xmlhttprequest"]
+    }
+  },
+  {
+    "id": 6,
+    "priority": 1,
+    "action": { "type": "block" },
+    "comment": "Phishing — Apple ID unlock phishing",
+    "condition": {
+      "urlFilter": "||appleid-unlock-verify.com^",
+      "resourceTypes": ["main_frame","sub_frame","script","xmlhttprequest"]
+    }
+  },
+  {
+    "id": 7,
+    "priority": 1,
+    "action": { "type": "block" },
+    "comment": "Phishing — Facebook session harvester",
+    "condition": {
+      "urlFilter": "||fb-login-secure.com^",
+      "resourceTypes": ["main_frame","sub_frame","script","xmlhttprequest"]
+    }
+  },
+  {
+    "id": 8,
+    "priority": 1,
+    "action": { "type": "block" },
+    "comment": "Malware distribution — fake Flash update dropper",
+    "condition": {
+      "urlFilter": "||update-flash-player.com^",
+      "resourceTypes": ["main_frame","sub_frame","script","xmlhttprequest"]
+    }
+  },
+  {
+    "id": 9,
+    "priority": 1,
+    "action": { "type": "block" },
+    "comment": "Malware — fake Chrome update page (drive-by)",
+    "condition": {
+      "urlFilter": "||chrome-update-required.com^",
+      "resourceTypes": ["main_frame","sub_frame","script","xmlhttprequest"]
+    }
+  },
+  {
+    "id": 10,
+    "priority": 1,
+    "action": { "type": "block" },
+    "comment": "Magecart skimmer — JS stats CDN used for card exfil",
+    "condition": {
+      "urlFilter": "||js-stats-cdn.com^",
+      "resourceTypes": ["script","xmlhttprequest","image"]
+    }
+  },
+  {
+    "id": 11,
+    "priority": 1,
+    "action": { "type": "block" },
+    "comment": "Magecart — checkout helper script (skimmer loader)",
+    "condition": {
+      "urlFilter": "||checkout-helper.biz^",
+      "resourceTypes": ["script","xmlhttprequest"]
+    }
+  },
+  {
+    "id": 12,
+    "priority": 1,
+    "action": { "type": "block" },
+    "comment": "DNS tunneling — known C2-over-DNS relay",
+    "condition": {
+      "urlFilter": "||dns-tunnel-relay.com^",
+      "resourceTypes": ["main_frame","sub_frame","script","xmlhttprequest","websocket"]
+    }
+  },
+  {
+    "id": 13,
+    "priority": 1,
+    "action": { "type": "block" },
+    "comment": "Fingerprinting farm — canvas/audio tracker",
+    "condition": {
+      "urlFilter": "||canvas-track.net^",
+      "resourceTypes": ["script","xmlhttprequest","image"]
+    }
+  },
+  {
+    "id": 14,
+    "priority": 1,
+    "action": { "type": "block" },
+    "comment": "Exploit kit — generic gate URL domain",
+    "condition": {
+      "urlFilter": "||exploit-landing.biz^",
+      "resourceTypes": ["main_frame","sub_frame","script","xmlhttprequest"]
+    }
+  },
+  {
+    "id": 15,
+    "priority": 1,
+    "action": { "type": "block" },
+    "comment": "Phishing — Microsoft 365 credential harvester",
+    "condition": {
+      "urlFilter": "||office365-signin-help.net^",
+      "resourceTypes": ["main_frame","sub_frame","script","xmlhttprequest"]
+    }
+  },
+  {
+    "id": 16,
+    "priority": 1,
+    "action": { "type": "block" },
+    "comment": "C2 — beacon analytics CDN (Cobalt Strike malleable C2)",
+    "condition": {
+      "urlFilter": "||beacon-analytics-cdn.com^",
+      "resourceTypes": ["script","xmlhttprequest","image","websocket"]
+    }
+  },
+  {
+    "id": 17,
+    "priority": 1,
+    "action": { "type": "block" },
+    "comment": "Phishing — account verify phishing portal",
+    "condition": {
+      "urlFilter": "||account-verify-now.net^",
+      "resourceTypes": ["main_frame","sub_frame","script","xmlhttprequest"]
+    }
+  },
+  {
+    "id": 18,
+    "priority": 1,
+    "action": { "type": "block" },
+    "comment": "Malware dropper — fake Java runtime",
+    "condition": {
+      "urlFilter": "||java-runtime-update.net^",
+      "resourceTypes": ["main_frame","sub_frame","script","xmlhttprequest"]
+    }
+  },
+  {
+    "id": 19,
+    "priority": 1,
+    "action": { "type": "block" },
+    "comment": "DoH abuse — DNS-over-HTTPS proxy bypass",
+    "condition": {
+      "urlFilter": "||doh-proxy-bypass.net^",
+      "resourceTypes": ["main_frame","sub_frame","script","xmlhttprequest"]
+    }
+  },
+  {
+    "id": 20,
+    "priority": 1,
+    "action": { "type": "block" },
+    "comment": "Fingerprinting — device fingerprint collector",
+    "condition": {
+      "urlFilter": "||fp-data-collect.io^",
+      "resourceTypes": ["script","xmlhttprequest","image"]
+    }
+  }
+]
